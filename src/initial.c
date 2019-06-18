@@ -348,6 +348,8 @@ void initialize_nbody(char parameterfile[])
 
 	DTIME_FRACTION = 1.0;
 
+	n_start = (NPART_TOTAL* PROC_RANK)/PROC_SIZE;
+        n_end = (NPART_TOTAL* (PROC_RANK + 1.0))/PROC_SIZE;
 
 	if (0 <  SnapFormat) {
 
